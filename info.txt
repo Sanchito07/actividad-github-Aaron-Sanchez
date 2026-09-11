@@ -1,0 +1,5 @@
+Aaron Santiago Sanchez Osuna
+09/09/26
+Objetivo El enseñarte a usar el github para futuros trabajos
+Un Pull Request (o solicitud de extracción) 
+es una propuesta para integrar los cambios realizados en una rama de código hacia otra rama principal.
