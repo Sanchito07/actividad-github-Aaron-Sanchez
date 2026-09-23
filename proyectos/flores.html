@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramo de Flores Amarillas 💛</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #fff8e1, #ffecb3);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #f57f17;
+            font-family: 'Arial', sans-serif;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .ramo {
+            position: relative;
+            width: 320px;
+            height: 380px;
+        }
+
+        /* Tallo principal */
+        .tallo {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            width: 14px;
+            height: 200px;
+            background: linear-gradient(to right, #2e7d32, #4caf50);
+            transform: translateX(-50%);
+            border-radius: 7px;
+        }
+
+        /* Tallos laterales */
+        .tallo-lado {
+            position: absolute;
+            bottom: 60px;
+            width: 8px;
+            height: 160px;
+            background: linear-gradient(to right, #388e3c, #66bb6a);
+            border-radius: 4px;
+        }
+        .tallo-izq { left: 85px; transform: rotate(-12deg); }
+        .tallo-der { right: 85px; transform: rotate(12deg); }
+
+        /* Hojas */
+        .hoja {
+            position: absolute;
+            width: 65px;
+            height: 32px;
+            background: #4caf50;
+            border-radius: 0 100% 0 100%;
+        }
+        .hoja1 { bottom: 130px; left: 70px; transform: rotate(-25deg); }
+        .hoja2 { bottom: 170px; right: 70px; transform: rotate(155deg); }
+        .hoja3 { bottom: 90px; left: 110px; transform: rotate(-5deg); }
+        .hoja4 { bottom: 110px; right: 110px; transform: rotate(175deg); }
+
+        /* Flor */
+        .flor {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+        }
+
+        .centro {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 24px;
+            height: 24px;
+            background: #795548;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
+        }
+
+        .petalo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 38px;
+            background: linear-gradient(to top, #ffc107, #ffeb3b);
+            border-radius: 50%;
+            transform-origin: center bottom;
+            box-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+
+        /* Posiciones ORDENADAS y niveladas */
+        .flor-centro { top: 0; left: 125px; z-index: 5; }
+        .flor-izq { top: 30px; left: 40px; }
+        .flor-der { top: 30px; right: 40px; }
+        .flor-izq-abajo { top: 90px; left: 60px; }
+        .flor-der-abajo { top: 90px; right: 60px; }
+
+        /* Lazo y envoltura */
+        .envoltura {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 160px;
+            height: 100px;
+            background: linear-gradient(to bottom, #fff3e0, #ffe0b2);
+            border-radius: 10px 10px 20px 20px;
+            box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+        }
+
+        .lazo {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 15;
+        }
+        .lazo-parte {
+            position: absolute;
+            top: 10px;
+            width: 45px;
+            height: 55px;
+            background: #e53935;
+            border-radius: 50%;
+            box-shadow: 1px 2px 4px rgba(0,0,0,0.1);
+        }
+        .lazo-izq { left: -35px; transform: rotate(-25deg); }
+        .lazo-der { right: -35px; transform: rotate(25deg); }
+        .nudo {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 22px;
+            height: 22px;
+            background: #c62828;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+        }
+
+        /* Animación suave */
+        @keyframes suave {
+            0%, 100% { transform: rotate(-1.5deg); }
+            50% { transform: rotate(1.5deg); }
+        }
+
+        .ramo {
+            animation: suave 5s ease-in-out infinite;
+        }
+
+        .mensaje {
+            margin-top: 30px;
+            font-size: 19px;
+            color: #e65100;
+            font-style: italic;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌻 Flores amarillas para ti 🌻</h1>
+
+    <div class="ramo">
+        <!-- Tallos -->
+        <div class="tallo"></div>
+        <div class="tallo-lado tallo-izq"></div>
+        <div class="tallo-lado tallo-der"></div>
+
+        <!-- Hojas -->
+        <div class="hoja hoja1"></div>
+        <div class="hoja hoja2"></div>
+        <div class="hoja hoja3"></div>
+        <div class="hoja hoja4"></div>
+
+        <!-- Flor CENTRO (la más alta) -->
+        <div class="flor flor-centro">
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(0deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(45deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(90deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(135deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(180deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(225deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(270deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(315deg) translateY(-10px);"></div>
+            <div class="centro"></div>
+        </div>
+
+        <!-- Flor IZQUIERDA -->
+        <div class="flor flor-izq">
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(0deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(45deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(90deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(135deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(180deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(225deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(270deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(315deg) translateY(-10px);"></div>
+            <div class="centro"></div>
+        </div>
+
+        <!-- Flor DERECHA -->
+        <div class="flor flor-der">
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(0deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(45deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(90deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(135deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(180deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(225deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(270deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(315deg) translateY(-10px);"></div>
+            <div class="centro"></div>
+        </div>
+
+        <!-- Flor IZQUIERDA ABAJO -->
+        <div class="flor flor-izq-abajo">
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(0deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(45deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(90deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(135deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(180deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(225deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(270deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(315deg) translateY(-10px);"></div>
+            <div class="centro"></div>
+        </div>
+
+        <!-- Flor DERECHA ABAJO -->
+        <div class="flor flor-der-abajo">
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(0deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(45deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(90deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(135deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(180deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(225deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(270deg) translateY(-10px);"></div>
+            <div class="petalo" style="transform: translate(-50%, -100%) rotate(315deg) translateY(-10px);"></div>
+            <div class="centro"></div>
+        </div>
+
+        <!-- Envoltura y lazo -->
+        <div class="envoltura"></div>
+        <div class="lazo">
+            <div class="nudo"></div>
+            <div class="lazo-parte lazo-izq"></div>
+            <div class="lazo-parte lazo-der"></div>
+        </div>
+    </div>
+
+    <p class="mensaje">✨ Que alegren tu día ✨</p>
+</body>
+</html>
