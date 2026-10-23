@@ -1,0 +1,312 @@
+
+/* Configuración general */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f3ef;
+    color: #252b36;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 7%;
+    background-color: #202938;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 27px;
+}
+
+.icono-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background-color: #e5a94d;
+    color: #202938;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #e5a94d;
+}
+
+/* Sección principal */
+.portada {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+    padding: 65px 7%;
+    background-color: #e8e3d9;
+}
+
+.contenido-portada {
+    flex: 1;
+}
+
+.etiqueta {
+    color: #a36c20;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.contenido-portada h2 {
+    max-width: 540px;
+    font-size: 43px;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.contenido-portada p {
+    max-width: 500px;
+}
+
+.imagen-portada {
+    flex: 1;
+}
+
+.imagen-portada img {
+    display: block;
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 12px 22px;
+    border-radius: 8px;
+    background-color: #bd812f;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: #95601c;
+}
+
+/* Sección de productos */
+.seccion-productos {
+    padding: 65px 7%;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-seccion h2 {
+    font-size: 32px;
+    margin: 8px 0;
+}
+
+.titulo-seccion > p:last-child {
+    color: #626a76;
+}
+
+/* Tarjetas y Flexbox */
+.contenedor-tarjetas {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.tarjeta {
+    width: 300px;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #dedbd4;
+    border-radius: 14px;
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(32, 41, 56, 0.07);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(32, 41, 56, 0.14);
+}
+
+.tarjeta img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.contenido-tarjeta {
+    padding: 20px;
+}
+
+.contenido-tarjeta h3 {
+    margin: 0 0 10px;
+    font-size: 21px;
+}
+
+.contenido-tarjeta p {
+    color: #626a76;
+    min-height: 72px;
+}
+
+.enlace-tarjeta {
+    display: inline-block;
+    margin-top: 8px;
+    color: #98611e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.enlace-tarjeta:hover {
+    text-decoration: underline;
+}
+
+/* Sección de contacto */
+.seccion-contacto {
+    padding: 55px 7%;
+    text-align: center;
+    background-color: #d9e0e1;
+}
+
+.seccion-contacto h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.boton-claro {
+    background-color: #202938;
+}
+
+.boton-claro:hover {
+    background-color: #39485e;
+}
+
+/* Pie de página */
+.pie-pagina {
+    padding: 25px 15px;
+    text-align: center;
+    background-color: #202938;
+    color: #e5e7eb;
+}
+
+.pie-pagina p {
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+/* Diseño para celulares */
+@media (max-width: 600px) {
+
+    .encabezado {
+        flex-direction: column;
+        padding: 20px 5%;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .portada {
+        flex-direction: column;
+        padding: 38px 6%;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .contenido-portada h2 {
+        font-size: 30px;
+    }
+
+    .imagen-portada {
+        width: 100%;
+    }
+
+    .imagen-portada img {
+        height: 230px;
+    }
+
+    .seccion-productos {
+        padding: 40px 5%;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 26px;
+    }
+
+    .contenedor-tarjetas {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .tarjeta {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .tarjeta img {
+        height: 210px;
+    }
+
+    .contenido-tarjeta p {
+        min-height: auto;
+    }
+
+    .seccion-contacto {
+        padding: 38px 6%;
+    }
+
+    .seccion-contacto h2 {
+        font-size: 25px;
+    }
+}

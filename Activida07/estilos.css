@@ -1,0 +1,61 @@
+/* Selector de etiqueta 1: body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+/* Selector de etiqueta 2: p */
+p {
+    color: #333333;
+    font-size: 16px;
+}
+
+/* Selector de etiqueta 3: nav */
+nav {
+    padding: 13px;
+    background-color: #976073;
+    text-align: center;
+}
+
+/* Clase 1 (reutilizada en los 3 artículos): .tarjeta */
+.tarjeta {
+    background-color: #d4caca;
+    border: 1px solid #5a042c;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+}
+
+/* Clase 2: .destacado */
+.destacado {
+    font-size: 18px;
+    color: #e63946;
+}
+
+/* Clase 3: .imagen-destacada */
+.imagen-destacada {
+    margin-left: 200px;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 10px;
+}
+
+/* ID 1: #encabezado-sitio */
+#encabezado-sitio {
+    background-color: #5a042c;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 0;
+}
+
+/* ID 2: #pie-pagina */
+#pie-pagina {
+    text-align: center;
+    padding: 15px;
+    background-color: #8a8080;
+    color: #ffffff;
+}
+```
+
+
